@@ -38,6 +38,7 @@ function calculateIncomeTax(){
 
     let typeAmount = 0;
     let incomeTax = 0;
+    let remainingBalance = 0;
 
     if(type == 'Yearly'){
         typeAmount = 12 * 30000;
@@ -58,14 +59,16 @@ function calculateIncomeTax(){
 
         if(typedNumbers < typeAmount){
             incomeTax = 0;
-            document.getElementById('message').innerHTML = 'Under '+ '' + typeAmount +  ' BDT you are not eligible for Tax'; 
+            remainingBalance = typedNumbers - incomeTax; 
+            document.getElementById('message').innerHTML = 'Under '+ '' + typeAmount +  ' BDT you are not eligible for Tax.<br/>So your balance : ' + remainingBalance + ' BDT'; 
 
         }else{
 
             incomeTax = (5/100) * typedNumbers;
             incomeTax = Math.round(incomeTax);
+            remainingBalance = typedNumbers - incomeTax;
 
-            document.getElementById('message').innerHTML = typeAmount + ' BDT or above '+ typeAmount + ' BDT you are eligible for 5% Tax'; 
+            document.getElementById('message').innerHTML = typeAmount + ' BDT or above '+ typeAmount + ' BDT you are eligible for 5% Tax.<br/>So your remaining balance : ' + remainingBalance + ' BDT'; 
         }
 
         document.getElementById('incomeTaxField').innerHTML = incomeTax + ' BDT'; 
