@@ -31,7 +31,7 @@
                           </label>
                         </div>
                     </div>
-                    <input id="typed-numbers" class="form-control" type="text">
+                    <input id="typed-numbers" class="form-control" type="text" placeholder="Enter Your Income">
                     <div class="numbers">
                         <div id="key-pad" class="calc-body">
                             <div class="calc-button-row">
@@ -65,7 +65,7 @@
         <div class="col-md-6">
             <div class="half-width">
                 <div class="taxPortion">
-                    <span>Tax :</span>&nbsp;&nbsp;<span id="incomeTaxField"></span>
+                    <span>Tax </span>&nbsp;&nbsp;<span id="incomeTaxField"></span>
                     <p id="message"></p>
                 </div> 
             </div>

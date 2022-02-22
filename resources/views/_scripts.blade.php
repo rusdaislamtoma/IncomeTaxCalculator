@@ -71,7 +71,7 @@ function calculateIncomeTax(){
             document.getElementById('message').innerHTML = typeAmount + ' BDT or above '+ typeAmount + ' BDT you are eligible for 5% Tax.<br/>So your remaining balance : ' + remainingBalance + ' BDT'; 
         }
 
-        document.getElementById('incomeTaxField').innerHTML = incomeTax + ' BDT'; 
+        document.getElementById('incomeTaxField').innerHTML = ': ' +incomeTax + ' BDT'; 
     }
 }
 </script>
